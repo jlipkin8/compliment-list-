@@ -6,3 +6,9 @@ def add_compliment_list(my_list):
     compliment = raw_input("Give a compliment: ")
     my_list.append(compliment)
     return my_list 
+
+def view_all_compliments(my_list): 
+    """iterates though the list containing compliments and prints each item out""" 
+    for compliment in my_list: 
+        print compliment 
+
