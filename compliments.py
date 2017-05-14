@@ -17,7 +17,7 @@ def view_all_compliments(my_list):
         print compliment 
 
 def view_random_compliment(my_list): 
-    end = my_list - 1 
+    end = len(my_list) - 1 
     random_num = random.randint(0,end)
     print my_list[random_num]
 
@@ -33,11 +33,19 @@ def display_main_menu(my_list):
         D. Quit the program 
         >>> """ 
 
-        while True: 
-            user_input = raw_input(user_options) 
-            if user_input == "A": 
-            elif user_input == "B": 
-            elif user_input == "C": 
-            elif user_input == "D": 
-            else: 
-                print "Thats not a valid option, please enter A, B, C, or D"
+    while True: 
+        user_input = raw_input(user_options) 
+        if user_input == "A": 
+            add_compliment_list(my_list)
+        elif user_input == "B": 
+            view_all_compliments(my_list)
+        elif user_input == "C": 
+            view_random_compliment(my_list)
+        elif user_input == "D": 
+            break
+        else: 
+            print "Thats not a valid option, please enter A, B, C, or D"
+
+
+compliments = ["Your hair looks great today"]
+display_main_menu(compliments)
